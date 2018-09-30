@@ -6,17 +6,29 @@ public class ArrayDemo {
 
     //Test Cases
     int[] testArray = {1,2,3,4};
-    printArray(testArray);
     
-    int[][] test2DArray = new int[][]{
+    int[][] test2DArray1 = new int[][]{
         {1,-456,3,0},
         {5,-1,7,8},
         {9,10,-11,12},
         };
-    printArray(test2DArray);
-    countZeros2D(test2DArray);
-    //fill2D(test2DArray);
-    printArray(fill2DCopy(test2DArray));
+       
+    int[][] test2DArray2 = new int [][]{
+        {33},
+        {-47},
+        {0},
+        {0},
+        {-1},
+        };
+        
+    
+    //Call Functions
+    printArray(testArray);
+    printArray(test2DArray1);
+    countZeros2D(test2DArray1);
+    //printArray(fill2D(test2DArray2)); //Print Test
+    printArray(fill2DCopy(test2DArray1)); //Print Test
+    fill2DCopy(test2DArray
 }
 
     
@@ -74,7 +86,7 @@ public class ArrayDemo {
                 }
             }
        }
-       System.out.println(counter);
+       //System.out.println(counter);  //Check
        return counter;
   
     }
