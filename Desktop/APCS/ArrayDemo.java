@@ -15,6 +15,7 @@ public class ArrayDemo {
         };
     printArray(test2DArray);
     countZeros2D(test2DArray);
+    fill2D(test2DArray);
 }
 
     
@@ -75,6 +76,20 @@ public class ArrayDemo {
        System.out.println(counter);
        return counter;
   
+    }
+    
+    public static void fill2D(int[][] vals){
+    
+        for(int i = 0; i < vals.length; i++){
+            for(int j = 0; j < vals[0].length; j++){
+                if(i == j){
+                    vals[i][j] = 3;
+                }
+                else{
+                    vals[i][j] = 1;
+                }
+            }
+        }
     }
     
 }
