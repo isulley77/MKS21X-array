@@ -9,13 +9,14 @@ public class ArrayDemo {
     printArray(testArray);
     
     int[][] test2DArray = new int[][]{
-        {1,2,3,0},
-        {5,0,7,8},
-        {9,10,0,12},
+        {1,-456,3,0},
+        {5,-1,7,8},
+        {9,10,-11,12},
         };
     printArray(test2DArray);
     countZeros2D(test2DArray);
-    fill2D(test2DArray);
+    //fill2D(test2DArray);
+    printArray(fill2DCopy(test2DArray));
 }
 
     
@@ -90,6 +91,23 @@ public class ArrayDemo {
                 }
             }
         }
+    }
+    
+    public static int[][] fill2DCopy(int[][] vals){
+    
+        int[][] new2DArray = new int[vals.length][vals[0].length];
+        
+        for(int i = 0; i < vals.length; i++){
+            for(int j = 0; j < vals[0].length; j++){
+                if(vals[i][j] < 0){
+                    new2DArray[i][j] = 3;
+                }
+                else{
+                    new2DArray[i][j] = 1;
+                }
+            }
+        }
+        return new2DArray;
     }
     
 }
